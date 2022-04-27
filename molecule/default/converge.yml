@@ -73,7 +73,6 @@
               stopasgroup=true
 
   roles:
-    - role: buluma.pip
     - role: ansible-role-supervisor
 
   tasks:
