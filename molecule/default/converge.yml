@@ -23,14 +23,14 @@
     - block:
         - name: install Apache (RedHat).
           package: name=httpd state=present
-        - name: Ensure Apache is not running (RedHat).
+        - name: ensure Apache is not running (RedHat).
           service: name=httpd state=stopped enabled=no
       when: ansible_os_family == 'RedHat'
 
     - block:
         - name: install Apache (Debian).
           package: name=apache2 state=present
-        - name: Ensure Apache is not running (Debian).
+        - name: ensure Apache is not running (Debian).
           service: name=apache2 state=stopped enabled=no
       when: ansible_os_family == 'Debian'
 
@@ -73,7 +73,7 @@
               stopasgroup=true
 
   roles:
-    - role: ansible-role-supervisor
+    - role: buluma.supervisor
 
   tasks:
     - name: trigger handlers so supervisor runs everything it should run.
