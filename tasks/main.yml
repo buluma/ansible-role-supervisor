@@ -5,13 +5,13 @@
     - "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
     - "{{ ansible_os_family }}.yml"
 
-- name: Ensure Supervisor is installed.
+- name: Ensure supervisor is installed.
   ansible.builtin.pip:
     name: supervisor
     state: present
     version: "{{ supervisor_version | default(omit) }}"
 
-- name: Ensure Supervisor log dir exists.
+- name: Ensure supervisor log dir exists.
   ansible.builtin.file:
     path: "{{ supervisor_log_dir }}"
     state: directory
@@ -22,13 +22,13 @@
 - include_tasks: init-setup.yml
   when: supervisor_started or supervisor_enabled
 
-- name: Ensure Supervisor is started (if configured).
+- name: Ensure supervisor is started (if configured).
   ansible.builtin.service:
     name: supervisord
     state: started
   when: supervisor_started
 
-- name: Ensure Supervisor is enabled at boot (if configured).
+- name: Ensure supervisor is enabled at boot (if configured).
   ansible.builtin.service:
     name: supervisord
     enabled: true
