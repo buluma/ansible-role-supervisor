@@ -14,7 +14,7 @@
       when: ansible_os_family == 'Debian'
 
   roles:
-    - role: ansible-role-supervisor
+    - role: buluma.supervisor
 
   tasks:
     - name: validate Supervisor is responding to requests through the web UI.
