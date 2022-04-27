@@ -8,4 +8,4 @@
   roles:
     - role: buluma.bootstrap
     - role: buluma.pip
-    - role: buluma.setuptools
+    - role: buluma.core_dependencies
