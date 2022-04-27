@@ -17,7 +17,7 @@ molecule:
   parallel:
     matrix:
       - image: "enterpriselinux"
-        tag: "7"
+        tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
@@ -40,7 +40,7 @@ testing:
   parallel:
     matrix:
       - image: "enterpriselinux"
-        tag: "7"
+        tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
@@ -67,7 +67,7 @@ role_testing:
   parallel:
     matrix:
       - image: "enterpriselinux"
-        tag: "7"
+        tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
