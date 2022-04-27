@@ -1,7 +1,8 @@
 ---
 galaxy_info:
   role_name: supervisor
-  author: geerlingguy
+  author: Michael Buluma
+  namespace: buluma
   description: Supervisor (process state manager) for Linux.
   issue_tracker_url: https://github.com/buluma/ansible-role-supervisor/issues
   company: ShadowNet

@@ -85,7 +85,6 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
               stopasgroup=true
 
   roles:
-    - role: buluma.pip
     - role: buluma.supervisor
 
   tasks:
@@ -123,6 +122,20 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
       args:
         warn: false
       changed_when: false
+```
+
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+```yaml
+---
+- name: Prepare
+  hosts: all
+  gather_facts: no
+  become: yes
+  serial: 30%
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.pip
 ```
 
 
@@ -178,6 +191,14 @@ supervisor_inet_http_server_password_protect: true
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-supervisor/blob/main/requirements.txt).
 
+## [Status of used roles](#status-of-requirements)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
+|[buluma.pip](https://galaxy.ansible.com/buluma/pip)|[![Build Status GitHub](https://github.com/buluma/ansible-role-pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-pip/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-pip/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-pip)|
 
 ## [Context](#context)
 
@@ -218,4 +239,4 @@ license (Apache-2.0)
 
 ## [Author Information](#author-information)
 
-[geerlingguy](https://buluma.github.io/)
+[Michael Buluma](https://buluma.github.io/)
