@@ -28,14 +28,6 @@ molecule:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
-      - image: "alpine-openrc"
-        tag: "latest"
-      - image: "docker-opensuse-systemd"
-        tag: "latest"
-      - image: "amazonlinux"
-        tag: "1"
-      - image: "amazonlinux"
-        tag: "latest"
 
 testing:
   stage: test
@@ -59,14 +51,6 @@ testing:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
-      - image: "alpine-openrc"
-        tag: "latest"
-      - image: "docker-opensuse-systemd"
-        tag: "latest"
-      - image: "amazonlinux"
-        tag: "1"
-      - image: "amazonlinux"
-        tag: "latest"
 
 galaxy:
   stage: deploy
@@ -94,14 +78,6 @@ role_testing:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
-      - image: "alpine-openrc"
-        tag: "latest"
-      - image: "docker-opensuse-systemd"
-        tag: "latest"
-      - image: "amazonlinux"
-        tag: "1"
-      - image: "amazonlinux"
-        tag: "latest"
 
 release_job:
   stage: .post

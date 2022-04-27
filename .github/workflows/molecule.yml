@@ -48,14 +48,6 @@ jobs:
             tag: "bionic"
           - image: "docker-ubuntu-systemd"
             tag: "focal"
-          - image: "alpine-openrc"
-            tag: "latest"
-          - image: "docker-opensuse-systemd"
-            tag: "latest"
-          - image: "amazonlinux"
-            tag: "1"
-          - image: "amazonlinux"
-            tag: "latest"
     steps:
       - name: checkout
         uses: actions/checkout@v3

@@ -18,15 +18,6 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
-    - name: Alpine
-      versions:
-        - all
-    - name: OpenSUSE
-      versions:
-        - all
-    - name: Amazon
-      versions:
-        - all
 
   galaxy_tags:
     - system
