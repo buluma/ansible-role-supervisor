@@ -10,7 +10,7 @@
 
   pre_tasks:
     - name: update apt cache.
-      apt: update_cache=true cache_valid_time=600
+      ansible.builtin.apt: update_cache=true cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
   roles:
@@ -18,7 +18,7 @@
 
   tasks:
     - name: validate Supervisor is responding to requests through the web UI.
-      uri:
+      ansible.builtin.uri:
         url: http://localhost:9001/
         method: GET
         user: "{{ supervisor_user }}"
@@ -26,7 +26,7 @@
         status_code: 200
 
     - name: validate Supervisor rejects unauthenticated requests to the web UI.
-      uri:
+      ansible.builtin.uri:
         url: http://localhost:9001/
         method: GET
         user: "{{ supervisor_user }}"
@@ -34,7 +34,7 @@
         status_code: 401
 
     - name: validate supervisorctl works with inet
-      command: supervisorctl status
+      ansible.builtin.command: supervisorctl status
       args:
         warn: false
       changed_when: false
