@@ -1,5 +1,5 @@
 ---
-- name: ensure supervisor config paths are present.
+- name: Ensure supervisor config paths are present.
   ansible.builtin.file:
     path: "{{ item }}"
     state: directory
@@ -10,14 +10,14 @@
     - "{{ supervisor_config_path }}"
     - "{{ supervisor_config_path }}/conf.d"
 
-- name: ensure supervisor configuration is present.
+- name: Ensure supervisor configuration is present.
   ansible.builtin.template:
     src: supervisord.conf.j2
     dest: "{{ supervisor_config_path }}/supervisord.conf"
     mode: 0644
   notify: restart supervisor
 
-- name: ensure supervisor program configs are present.
+- name: Ensure supervisor program configs are present.
   ansible.builtin.template:
     src: program.conf.j2
     dest: "{{ supervisor_config_path }}/conf.d/{{ item.name }}.conf"
@@ -29,7 +29,7 @@
   loop: "{{ supervisor_programs }}"
   notify: restart supervisor
 
-- name: ensure unwanted supervisor program configs are absent
+- name: Ensure unwanted supervisor program configs are absent
   ansible.builtin.file:
     path: "{{ supervisor_config_path }}/conf.d/{{ item.name }}.conf"
     state: absent
