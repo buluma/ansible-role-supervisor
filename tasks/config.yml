@@ -15,7 +15,7 @@
     src: supervisord.conf.j2
     dest: "{{ supervisor_config_path }}/supervisord.conf"
     mode: 0644
-  notify: restart supervisor
+  notify: Restart supervisor
 
 - name: Ensure supervisor program configs are present.
   ansible.builtin.template:
@@ -27,7 +27,7 @@
     mode: 0644
   when: item.state|default('present') != 'absent'
   loop: "{{ supervisor_programs }}"
-  notify: restart supervisor
+  notify: Restart supervisor
 
 - name: Ensure unwanted supervisor program configs are absent
   ansible.builtin.file:
@@ -35,4 +35,4 @@
     state: absent
   when: item.state|default('present') == 'absent'
   with_items: "{{ supervisor_programs }}"
-  notify: restart supervisor
+  notify: Restart supervisor

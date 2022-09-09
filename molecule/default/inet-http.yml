@@ -9,7 +9,7 @@
     supervisor_inet_http_server_port: '*:9001'
 
   pre_tasks:
-    - name: update apt cache.
+    - name: Update apt cache.
       ansible.builtin.apt: update_cache=true cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
@@ -17,7 +17,7 @@
     - role: buluma.supervisor
 
   tasks:
-    - name: validate Supervisor is responding to requests through the web UI.
+    - name: Validate Supervisor is responding to requests through the web UI.
       ansible.builtin.uri:
         url: http://localhost:9001/
         method: GET
@@ -25,7 +25,7 @@
         password: "{{ supervisor_password }}"
         status_code: 200
 
-    - name: validate Supervisor rejects unauthenticated requests to the web UI.
+    - name: Validate Supervisor rejects unauthenticated requests to the web UI.
       ansible.builtin.uri:
         url: http://localhost:9001/
         method: GET
@@ -33,7 +33,7 @@
         password: "fizzbuzz"
         status_code: 401
 
-    - name: validate supervisorctl works with inet
+    - name: Validate supervisorctl works with inet
       ansible.builtin.command: supervisorctl status
       args:
         warn: false

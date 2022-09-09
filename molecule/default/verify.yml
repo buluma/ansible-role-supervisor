@@ -5,16 +5,16 @@
   gather_facts: no
 
   tasks:
-    - name: test connection
+    - name: Test connection
       ansible.builtin.ping:
 
-    - name: verify apache is responding on port 80.
+    - name: Verify apache is responding on port 80.
       ansible.builtin.uri:
         url: http://127.0.0.1/
         method: GET
         status_code: 200
 
-    - name: validate supervisorctl works with unix socket
+    - name: Validate supervisorctl works with unix socket
       command: supervisorctl status
       args:
         warn: false
