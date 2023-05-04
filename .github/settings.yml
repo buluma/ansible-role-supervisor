@@ -5,4 +5,4 @@
 repository:
   description: Supervisor (process state manager) for Linux.
   homepage: https://buluma.github.io/
-  topics: system, server, process, supervisor, supervisord, manager, init, docker, ansible, molecule, tox, playbook, hacktoberfest
+  topics: system, server, process, supervisor, supervisord, manager, init, docker, ansible, molecule, tox, playbook
