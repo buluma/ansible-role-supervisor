@@ -1,5 +1,5 @@
 ---
-- name: Copy supervisor init file into place (for non-systemd systems).
+- name: init-setup | Copy supervisor init file into place (for non-systemd systems).
   ansible.builtin.template:
     src: "supervisord.init-{{ ansible_os_family }}.j2"
     dest: /etc/init.d/supervisord
@@ -9,7 +9,7 @@
   when: "ansible_service_mgr != 'systemd'"
   notify: Restart supervisor
 
-- name: Copy supervisor unit file into place (for systemd systems).
+- name: init-setup | Copy supervisor unit file into place (for systemd systems).
   ansible.builtin.template:
     src: supervisord.unit.j2
     dest: /etc/systemd/system/supervisord.service
