@@ -77,7 +77,7 @@
 
   tasks:
     - name: trigger handlers so supervisor runs everything it should run.
-      meta: flush_handlers
+      ansible.builtin.meta: flush_handlers
 
   post_tasks:
     - name: wait for Apache to come up (if it's going to do so...).

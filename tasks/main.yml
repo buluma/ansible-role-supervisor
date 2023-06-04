@@ -17,9 +17,11 @@
     state: directory
     mode: 0755
 
-- include_tasks: config.yml
+- name: Import Config
+  ansible.builtin.include_tasks: config.yml
 
-- include_tasks: init-setup.yml
+- name: Init Setup
+  ansible.builtin.include_tasks: init-setup.yml
   when: supervisor_started or supervisor_enabled
 
 - name: Ensure supervisor is started (if configured).
