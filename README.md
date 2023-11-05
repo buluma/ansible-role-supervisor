@@ -2,9 +2,9 @@
 
 Supervisor (process state manager) for Linux.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-supervisor/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-supervisor/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-supervisor/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-supervisor)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/supervisor)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/supervisor)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-supervisor/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-supervisor/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-supervisor/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-supervisor)|[![downloads](https://img.shields.io/ansible/role/d/4848)](https://galaxy.ansible.com/buluma/supervisor)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -90,7 +90,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
   tasks:
     - name: trigger handlers so supervisor runs everything it should run.
-      meta: flush_handlers
+      ansible.builtin.meta: flush_handlers
 
   post_tasks:
     - name: wait for Apache to come up (if it's going to do so...).
