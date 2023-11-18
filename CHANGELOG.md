@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-supervisor/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-supervisor/compare/0.1.3...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#8](https://github.com/buluma/ansible-role-supervisor/issues/8)
+- Update action [\#7](https://github.com/buluma/ansible-role-supervisor/issues/7)
+
 ## [0.1.3](https://github.com/buluma/ansible-role-supervisor/tree/0.1.3) (2022-09-09)
 
 [Full Changelog](https://github.com/buluma/ansible-role-supervisor/compare/0.1.2...0.1.3)
