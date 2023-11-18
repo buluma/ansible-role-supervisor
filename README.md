@@ -1,4 +1,4 @@
-# [supervisor](#supervisor)
+# [Ansible role supervisor](#supervisor)
 
 Supervisor (process state manager) for Linux.
 
