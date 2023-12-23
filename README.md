@@ -2,9 +2,9 @@
 
 Supervisor (process state manager) for Linux.
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-supervisor/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-supervisor)|[![downloads](https://img.shields.io/ansible/role/d/4848)](https://galaxy.ansible.com/buluma/supervisor)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/pulls/)|
+|GitHub|Version|Issues|Pull Requests|
+|------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -200,11 +200,11 @@ supervisor_inet_http_server_password_protect: true
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | GitLab |
+| Requirement | GitHub | Version |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
-|[buluma.pip](https://galaxy.ansible.com/buluma/pip)|[![Build Status GitHub](https://github.com/buluma/ansible-role-pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-pip/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-pip/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-pip)|
-|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-core_dependencies)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.pip](https://galaxy.ansible.com/buluma/pip)|[![Build Status GitHub](https://github.com/buluma/ansible-role-pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-pip/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-pip.svg)](https://github.com/shadowwalker/ansible-role-pip)|
+|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-core_dependencies.svg)](https://github.com/shadowwalker/ansible-role-core_dependencies)|
 
 ## [Context](#context)
 
@@ -245,7 +245,6 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 [buluma](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
 
 ### [Special Thanks](#special-thanks)
 
