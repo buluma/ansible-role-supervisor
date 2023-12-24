@@ -1,10 +1,10 @@
-# [Ansible role supervisor](#supervisor)
+# Ansible role [supervisor](https://galaxy.ansible.com/ui/standalone/roles/buluma/supervisor/documentation)
 
 Supervisor (process state manager) for Linux.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-supervisor/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-supervisor.svg)](https://github.com/buluma/ansible-role-supervisor/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/supervisor)](https://galaxy.ansible.com/ui/standalone/roles/buluma/supervisor/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -243,9 +243,7 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
