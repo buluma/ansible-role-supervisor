@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#11](https://github.com/buluma/ansible-role-supervisor/issues/11)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#8](https://github.com/buluma/ansible-role-supervisor/issues/8)
 - Update action [\#7](https://github.com/buluma/ansible-role-supervisor/issues/7)
 
