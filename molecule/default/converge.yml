@@ -93,8 +93,6 @@
 
     - name: verify supervisorctl is available.
       command: supervisorctl --help
-      args:
-        warn: false
       changed_when: false
 
     - name: validate supervisorctl works through the default UNIX socket.
