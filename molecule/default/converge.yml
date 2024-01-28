@@ -33,6 +33,10 @@
       apt: update_cache=true cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
+    - name: Install python3-full for testing purposes.
+      package: name=python3-full state=present
+      when: ansible_os_family == 'Debian'
+
     # Install curl for test purposes.
     - name: Install curl for testing purposes.
       package: name=curl state=present
