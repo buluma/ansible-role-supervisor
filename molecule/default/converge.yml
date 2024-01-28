@@ -11,6 +11,24 @@
     supervisor_password: fizzbuzz
 
   pre_tasks:
+    - name: debian12 | Get python3 version installed
+      ansible.builtin.command: python3 --version
+      register: py3ver
+      changed_when: false
+      when:
+        - ansible_distribution == "Debian"
+        - ansible_distribution_major_version|int >= 12
+      tags:
+        - molecule-notest
+
+    - name: debian12 | Remove EXTERNALLY-MANAGED
+      ansible.builtin.file:
+        path: /usr/lib/python3.11/EXTERNALLY-MANAGED
+        state: absent
+      when: py3ver is defined and py3ver.stdout.find("3.11") != -1
+      tags:
+        - molecule-notest
+
     - name: Update apt cache (Debian).
       apt: update_cache=true cache_valid_time=600
       when: ansible_os_family == 'Debian'

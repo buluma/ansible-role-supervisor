@@ -2,7 +2,7 @@
 - name: Verify
   hosts: all
   become: no
-  gather_facts: no
+  gather_facts: yes
 
   environment:
     PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
@@ -20,7 +20,7 @@
         port: 80
         delay: 2
 
-    - name: verify Apache is responding on port 80.
+    - name: Verify Apache is responding on port 80.
       ansible.builtin.uri:
         url: http://127.0.0.1/
         method: GET
