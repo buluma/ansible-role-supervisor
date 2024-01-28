@@ -8,12 +8,32 @@
     - name: Test connection
       ansible.builtin.ping:
 
-    - name: Verify apache is responding on port 80.
-      ansible.builtin.uri:
-        url: http://127.0.0.1/
-        method: GET
-        status_code: 200
+  - name: Wait for Apache to come up (if it's going to do so...).
+    ansible.builtin.wait_for:
+      port: 80
+      delay: 2
 
-    - name: Validate supervisorctl works with unix socket
-      command: supervisorctl status
-      changed_when: false
+  - name: verify Apache is responding on port 80.
+    ansible.builtin.uri:
+      url: http://127.0.0.1/
+      method: GET
+      status_code: 200
+
+  - name: Verify supervisorctl is available.
+    command: supervisorctl --help
+    changed_when: false
+
+  - name: Validate supervisorctl works through the default UNIX socket.
+    community.general.supervisorctl:
+      name: apache
+      state: restarted
+      username: "{{ supervisor_user }}"
+      password: "{{ supervisor_password }}"
+    changed_when: false
+
+  - name: Validate supervisorctl works with unix socket
+    command: supervisorctl status
+    changed_when: false
+
+  - name: Trigger handlers so supervisor runs everything it should run.
+    ansible.builtin.meta: flush_handlers
