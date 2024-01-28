@@ -16,6 +16,7 @@ exclude_paths:
 skip_list:
   - yaml[truthy]
   - no-free-form
+  - command-instead-of-module
 
 enable_list:
   - name[prefix]

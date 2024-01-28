@@ -4,6 +4,13 @@
   become: no
   gather_facts: no
 
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+
+  vars:
+    supervisor_user: root
+    supervisor_password: fizzbuzz
+
   tasks:
     - name: Test connection
       ansible.builtin.ping:
