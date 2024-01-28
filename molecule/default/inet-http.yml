@@ -35,6 +35,4 @@
 
     - name: Validate supervisorctl works with inet
       ansible.builtin.command: supervisorctl status
-      args:
-        warn: false
       changed_when: false
